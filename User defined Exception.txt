@@ -1,0 +1,26 @@
+import java.util.*;
+class UserDefinedException extends Exception {
+  public UserDefinedException (String s) {
+    super(s);
+  }
+}
+class Uexp {
+  static void validate (int age) throws UserDefinedException {
+    if(age<18) {
+      throw new UserDefinedException("Sorry"); 
+    }
+  }
+  public static void main(String[] args) {
+    try {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter your age:");
+      int a1 = sc.nextInt();
+      validate(a1);
+      System.out.println("You are eligible");
+    }
+    catch(UserDefinedException e) {
+      System.out.println("Exception caught");
+      System.out.println(e.getMessage());
+    }
+  }
+}

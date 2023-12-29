@@ -1,0 +1,55 @@
+class Wrps {
+  public void primitivetoobj() {
+    int a=50;
+    Integer a1=a; //Autoboximg
+    System.out.println("integer obj is:" + a +" "+ a1);
+    float b= 3.14f;  
+    Float b1=b;
+    System.out.println("float obj is:" + b+ " "+b1);
+    byte c=100;
+    Byte c1=c;
+    System.out.println("byte obj is:" + c+ " " +c1);
+    char d= 'T';
+    Character d1=d;
+    System.out.println("charater obj is:" + d+ " "+d1); 
+    short e=4000;
+    Short e1=e;
+    System.out.println("short obj is:" + e+ " "+e1);
+    long f=1200000000L;
+    Long f1=f;
+    System.out.println("long obj is:" + f+ " "+f1);
+    double g=12.77d;
+    Double g1=g;
+    System.out.println("double obj is:" + g+ " "+g1);
+    boolean h=true;
+    Boolean h1=h;
+    System.out.println("boolean obj is:" + h +" " +h1);
+  }
+  public void objtoprimitive() {
+    Integer a1=Integer.valueOf(60);
+    int a2=a1; //Unboxing
+    System.out.println("value of int variable:" + a1+ " "+ a2);
+    Float b1=Float.valueOf(3.14f);
+    float b2=b1;
+    System.out.println("value of float variable:" + b1+" "+b2);
+    Character d1=Character.valueOf('H');
+    char d2=d1;
+    System.out.println("value of character variable:" + d1+" "+d2);
+    Long f1=Long.valueOf(1200000000L);
+    long f2=f1;
+    System.out.println("value of long variable:" + f1+ " "+f2);
+    Double g1=Double.valueOf(12.77); 
+    double g2=g1;
+    System.out.println("value of double variable:" + g1+ " "+g2);
+    Boolean h1=Boolean.valueOf(true);
+    boolean h2=h1;
+    System.out.println("value of boolean variable:" + h1+" " +h2);
+  }
+}
+class Wrp {
+  public static void main(String[] args) {
+    Wrps t=new Wrps();
+    t.primitivetoobj();
+    t.objtoprimitive();
+  }
+}

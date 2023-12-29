@@ -1,0 +1,24 @@
+class Student implements Cloneable {
+  int rno;
+  String name;
+  public Student(int rno, String name) {
+    this.rno = rno;  
+    this.name = name;
+  }
+  public Object clone() throws CloneNotSupportedException {  
+    return super.clone();
+  }
+  public static void main(String[] args) {
+    Student s = new Student(28, "Arun");
+    System.out.println("original object is:");
+    System.out.println(s.rno + " " + s.name);
+    try {
+      Student s1 = (Student)s.clone();
+      System.out.println("cloned object is:");
+      System.out.println(s1.rno + " " + s1.name); 
+    }
+    catch (Exception e) {
+      System.out.println("excptn caugth");
+    }
+  }
+}

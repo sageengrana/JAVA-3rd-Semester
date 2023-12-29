@@ -1,0 +1,25 @@
+// copy constructor
+import java.io.*;
+import java.util.*;
+class student {
+  int id;
+  String name;
+  student(int i, String s) {
+    id = i;
+    name=s;
+  }
+  student(student s) {
+    id=s.id;
+    name=s.name;
+  }
+  void display() {
+    System.out.println("Id ="+id);
+    System.out.println("Name ="+name);
+  }
+  public static void main(String args[]) {
+    student s1 = new student(7,"Arun");
+    student s2 = new student(s1);
+    s1.display();
+    s2.display();
+  }
+}

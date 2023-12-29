@@ -1,0 +1,38 @@
+//abstraction
+import java.util.*;
+abstract class bank {
+  public abstract void Intrest(); 
+}
+class sbi extends bank {
+  public void Intrest() {
+    int intrest,P,R,N;
+    Scanner s1= new Scanner(System.in);
+    System.out.println("ent the values");
+    P=s1.nextInt();
+    R=s1.nextInt(); 
+    N=s1.nextInt();
+    intrest=(P*R*N)/100;
+    System.out.println("sbibank_intrest is:" + intrest);
+  }
+}
+class indianbank extends bank {
+  public void Intrest() {
+    int intrest,P,R,N;
+    Scanner s1= new Scanner(System.in);
+    System.out.println("ent the values");
+    P=s1.nextInt();
+    R=s1.nextInt();
+    N=s1.nextInt();
+    intrest=(P*R*N)/100;
+    System.out.println("indianbank_intrest is:" + intrest);
+  }  
+}
+class abst {
+  public static void main(String[]args) {
+    bank s2;
+    s2= new sbi();
+    s2.Intrest();
+    s2= new indianbank();
+    s2.Intrest();
+  }
+}

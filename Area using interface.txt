@@ -1,0 +1,26 @@
+import java.lang.*;
+interface area {
+  static float pi = 3.14f;
+  float compute (float x, float y); 
+}
+class rectangle implements area {
+  public float compute(float x, float y) {
+    return (x*y);
+  }
+}
+class circle implements area {
+  public float compute(float x, float y) {
+    return (pi*x*x);
+  }
+}
+public class multiple {
+  public static void main(String args[]) {
+    rectangle rect = new rectangle();
+    circle c = new circle();
+    area a;
+    a = rect;
+    System.out.println("Area of rectangle="+a.compute(10,20));
+    a = c;
+    System.out.println("Area of circle="+a.compute(3,0));
+  }
+}

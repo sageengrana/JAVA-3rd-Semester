@@ -1,0 +1,75 @@
+//super keyword
+import java.io.*;
+class animal {
+  String color="white";
+}
+class dog extends animal {
+  String color="grey";
+  public void display() {
+    System.out.println(color);
+    System.out.println(super.color);
+  }  
+}
+class parentvariable {
+  public static void main(String args[]) {
+    dog d = new dog();
+    d.display();
+  }
+}
+//super keyword
+import java.io.*;
+class animal1 {
+  public void eat1() {
+    System.out.println("Eating Non Veg...");
+  }
+}
+class dog extends animal1 {
+  @Override  
+  public void eat1() {
+    System.out.println("Eating Meat");
+  }
+  public void bark() {
+    System.out.println("barking");
+  }
+  public void work() {
+    super.eat1();
+    eat1();
+    bark();
+  }
+}
+class parentmethod {
+  public static void main(String args[]) {
+    dog d = new dog();
+    d.work();
+  }
+}
+//super keyword 
+import java.io.*;
+class base {
+  base() {
+    System.out.println("base created");
+  }
+}
+class d1 extends base {
+  d1() {
+    super();
+    System.out.println("derived created");
+  }
+}
+class parentconstructor {
+  public static void main(String args[]) {
+    d1 d = new d1();
+  } 
+}
+class final1 {
+  int a=10;
+  int b=7;
+  final int c = a+b;
+  public void run() {
+    System.out.println("Sum="+c); 
+  }
+  public static void main(String args[]) {
+    final1 ob = new final1();
+    ob.run();
+  }
+}

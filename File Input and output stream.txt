@@ -1,0 +1,33 @@
+//file input  
+import java.io.*;
+import java.io.FileInputStream;
+import java.io.InputStream;
+public class ipstream {
+  public static void main(String[] args) {
+    byte[] ary = new byte[100];
+    try {
+      InputStream ip = new FileInputStream("sample.txt");
+      System.out.println("Available size = "+ip.available());
+      ip.read(ary);
+      String data = new String(ary);
+      System.out.println("File content:"+data);
+      ip.close(); 
+    }
+    catch (Exception e) {
+      System.out.println("Error = "+e);
+    }
+  }
+}
+//output stream
+import java.io.*;
+public class opstream {
+  public static void main(String[] args) {
+    String data = "Hello Arun";
+    try {
+      OutputStream op = new FileOutputStream("hello.txt");
+      byte[] ary = data.getBytes();
+      op.write(ary);
+      System.out.println("File written successfully");
+      op.close();
+    } catch (Exception e) {
+      System.out.println("Error=" +

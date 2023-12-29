@@ -1,0 +1,27 @@
+//constructor overloading 
+import java.io.*;
+import java.util.*;
+class overloading {
+  int id,age;
+  String name;
+  overloading(int i, String s) {
+    id=i;  
+    name=s;
+  }
+  overloading(int i,int a, String s) {
+    id = i;
+    age = a;
+    name = s;
+  }
+  void display() {
+    System.out.println("Reg No="+id);
+    System.out.println("Name ="+name);
+    System.out.println("Age ="+age);
+  }
+  public static void main(String args[]) {
+    overloading s1 = new overloading(10,18,"Arun");
+    overloading s2 = new overloading(7, 18,"Ash");
+    s1.display();
+    s2.display();
+  }
+}

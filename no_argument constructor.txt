@@ -1,0 +1,14 @@
+//no_argument constructor
+class no_arg {
+  int n;
+  String s;
+  no_arg() {
+    n=7;
+    s="Arun";
+  }
+  public static void main (String args[]) {
+    no_arg ob = new no_arg();
+    System.out.println("No ="+ob.n);
+    System.out.println("Name ="+ob.s);
+  }
+}

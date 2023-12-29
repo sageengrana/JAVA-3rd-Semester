@@ -1,0 +1,34 @@
+//hierarchical inheirtance
+import java.io.*;
+import java.util.*;
+class baseA {
+  int no,age;
+  public void input() {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter no and age:");
+    no = sc.nextInt();
+    age = sc.nextInt();
+  }
+}
+class derivedB extends baseA {
+  String name;
+  public void input1() {
+    name = "Arun";
+    System.out.println("Name="+name);
+  }
+}  
+class derivedC extends baseA {
+  public void display() {
+    System.out.println("Reg no="+no);
+    System.out.println("Age="+age);
+  }
+}
+class hierarchical {
+  public static void main (String[] args) {
+    derivedB ob = new derivedB();  
+    derivedC ob1 = new derivedC();
+    ob.input1();
+    ob1.input();
+    ob1.display();
+  }
+}

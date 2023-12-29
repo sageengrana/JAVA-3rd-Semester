@@ -1,0 +1,13 @@
+//exception handling
+class exp {
+  public static void main(String args[]) {
+    try {
+      String a = null;
+      System.out.println("The length of the string is:"+a.length());
+    }
+    catch(NullPointerException e) {
+      System.out.println("Exception caught");
+      System.out.println("Exception:\n"+e);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+//single inheritance  
+import java.io.*;
+import java.util.*;
+class parent {
+  int no,age;
+  public void displaybase() {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter no and age :");
+    no = sc.nextInt();
+    age = sc.nextInt();
+    System.out.println("No=" +no+"Age="+age);
+  }
+}
+public class single extends parent {
+  String name;
+  public void display() { 
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter Name :");
+    name = sc.nextLine();
+    System.out.println("Name :"+name);
+  }
+  public static void main(String args[]) {
+    single ch = new single();
+    ch.display();
+    ch.displaybase();
+  }
+}
